@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:elevation="5dp"
+        android:id="@+id/progress_circular_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progress_bar_background"
+        android:padding="20dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:visibility="visible">
+        <ProgressBar
+            android:indeterminateTint="@android:color/white"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.01"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.99"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewOpportunityDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/bg2"
+                app:cardElevation="3dp"
+                android:background="@drawable/bg_stroke"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/guideline3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.05" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.95" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.10" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.90" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.10" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="55dp" />
+
+                    <TextView
+                        android:id="@+id/textViewOppurtinityDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opportunity_details"
+                        style="@style/CardInfoHead"
+                        app:layout_constraintStart_toStartOf="@id/guideline5"
+                        app:layout_constraintTop_toTopOf="@id/guideline7"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editTextLayoutOfferName"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/guideline9"
+                        app:layout_constraintEnd_toEndOf="@id/guideline6"
+                        app:layout_constraintTop_toBottomOf="@id/textViewOppurtinityDetails">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextOfferName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/offer_name"
+                            android:inputType="text"
+                            android:defaultFocusHighlightEnabled="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editTextLayoutRequirements"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/guideline9"
+                        app:layout_constraintEnd_toEndOf="@id/guideline6"
+                        app:layout_constraintTop_toBottomOf="@id/editTextLayoutOfferName">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextRequirements"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/requirement"
+                            android:inputType="text"
+                            android:defaultFocusHighlightEnabled="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editTextLayoutSkills"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/guideline9"
+                        app:layout_constraintEnd_toEndOf="@id/guideline6"
+                        app:layout_constraintTop_toBottomOf="@id/editTextLayoutRequirements">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextSkills"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/skills"
+                            android:inputType="text"
+                            android:defaultFocusHighlightEnabled="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editTextLayoutExpectations"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/guideline9"
+                        app:layout_constraintEnd_toEndOf="@id/guideline6"
+                        app:layout_constraintTop_toBottomOf="@id/editTextLayoutSkills"
+                        app:layout_constraintBottom_toTopOf="@id/guideline8">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextExpectations"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/expectation_from_applicant"
+                            android:inputType="text"
+                            android:defaultFocusHighlightEnabled="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewAllow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/allow_candidates_to_apply"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cardViewOpportunityDetails"
+                app:layout_constraintStart_toStartOf="@id/guideline1"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchAllow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/textViewAllow"
+                app:layout_constraintBottom_toBottomOf="@id/textViewAllow"
+                app:layout_constraintStart_toEndOf="@id/textViewAllow"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintHorizontal_bias="1"/>
+
+            <Button
+                android:id="@+id/buttonEditDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/save_amp_update"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/buttonDelist"
+                app:layout_constraintEnd_toEndOf="@id/buttonDelist"
+                app:layout_constraintTop_toBottomOf="@id/textViewAllow"/>
+
+            <TextView
+                android:id="@+id/textViewEditDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/update_offer_details"
+                app:layout_constraintStart_toStartOf="@id/textViewDelist"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/buttonEditDetails"
+                app:layout_constraintBottom_toBottomOf="@id/buttonEditDetails"/>
+            <Button
+                android:id="@+id/buttonViewApplicants"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/view_applicants"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/buttonDelist"
+                app:layout_constraintEnd_toEndOf="@id/buttonDelist"
+                app:layout_constraintTop_toBottomOf="@id/buttonEditDetails"/>
+
+            <TextView
+                android:id="@+id/textViewViewApplicants"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/view_list_of_applicants"
+                app:layout_constraintStart_toStartOf="@id/textViewDelist"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/buttonViewApplicants"
+                app:layout_constraintBottom_toBottomOf="@id/buttonViewApplicants"/>
+
+            <Button
+                android:id="@+id/buttonDelist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delist_opportunity"
+                android:layout_marginTop="10dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintEnd_toStartOf="@id/textViewDelist"
+                app:layout_constraintTop_toBottomOf="@id/buttonViewApplicants"
+                app:layout_constraintBottom_toBottomOf="@id/guideline4"/>
+
+            <TextView
+                android:id="@+id/textViewDelist"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/take_down_this_offer_permanently"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@id/buttonDelist"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/buttonDelist"
+                app:layout_constraintBottom_toBottomOf="@id/buttonDelist"
+                app:layout_constraintHorizontal_bias="1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

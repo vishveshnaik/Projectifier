@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "897180209161",
+    "firebase_url": "https://projectified-a5d46.firebaseio.com",
+    "project_id": "projectified-a5d46",
+    "storage_bucket": "projectified-a5d46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897180209161:android:00755c5cdb988859bd68d8",
+        "android_client_info": {
+          "package_name": "com.princeakash.projectified"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897180209161-tle4ov5lnfelhhi16dpvqreb524q352n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.princeakash.projectified",
+            "certificate_hash": "ae1822492098790409510a2fac06685de111d132"
+          }
+        },
+        {
+          "client_id": "897180209161-s59vat9kdj41kkbgubvu5dojfi4oakp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGcqViPMxgAb0hIL1j1GyhSBcJrlVO_Ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897180209161-s59vat9kdj41kkbgubvu5dojfi4oakp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

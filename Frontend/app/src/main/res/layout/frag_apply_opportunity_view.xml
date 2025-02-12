@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:elevation="5dp"
+        android:id="@+id/progress_circular_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progress_bar_background"
+        android:padding="20dp"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal|center_vertical">
+        <ProgressBar
+            android:indeterminateTint="@android:color/white"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.0"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="1"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.01"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="1"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewOpportunityDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:background="@drawable/bg_stroke"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/guideline3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.05" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.95" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.10" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.90" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.10" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="55dp" />
+
+                    <TextView
+                        android:id="@+id/textViewOpportunityDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opportunity_details"
+                        style="@style/CardInfoHead"
+                        app:layout_constraintStart_toStartOf="@id/guideline5"
+                        app:layout_constraintTop_toTopOf="@id/guideline7"/>
+
+                    <TextView
+                        android:id="@+id/textViewRequirement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/requirement"
+                        app:layout_constraintStart_toStartOf="@id/guideline9"
+                        app:layout_constraintTop_toBottomOf="@id/textViewOpportunityDetails"/>
+
+                    <TextView
+                        android:id="@+id/textViewRequirementData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/guideline10"
+                        app:layout_constraintEnd_toEndOf="@id/guideline6"
+                        app:layout_constraintTop_toBottomOf="@id/textViewRequirement"/>
+
+                    <TextView
+                        android:id="@+id/textViewSkills"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/skills"
+                        app:layout_constraintStart_toStartOf="@id/guideline9"
+                        app:layout_constraintTop_toBottomOf="@id/textViewRequirementData"/>
+
+                    <TextView
+                        android:id="@+id/textViewSkillsData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/guideline10"
+                        app:layout_constraintEnd_toEndOf="@id/guideline6"
+                        app:layout_constraintTop_toBottomOf="@id/textViewSkills"/>
+
+                    <TextView
+                        android:id="@+id/textViewExpectation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Expectation From Applicant"
+                        app:layout_constraintStart_toStartOf="@id/guideline9"
+                        app:layout_constraintTop_toBottomOf="@id/textViewSkillsData"/>
+
+                    <TextView
+                        android:id="@+id/textViewExpectationData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/guideline10"
+                        app:layout_constraintEnd_toEndOf="@id/guideline6"
+                        app:layout_constraintTop_toBottomOf="@id/textViewExpectation"
+                        app:layout_constraintBottom_toTopOf="@id/guideline8"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewRecruiterDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:background="@drawable/view_pagerdesign"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/cardViewOpportunityDetails"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.05" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.95" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.10" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.90" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.10" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="55dp" />
+
+
+                    <TextView
+                        android:id="@+id/textViewRecruiterDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recruiter_details"
+                        style="@style/CardInfoHead"
+                        app:layout_constraintStart_toStartOf="@id/guideline11"
+                        app:layout_constraintTop_toBottomOf="@id/guideline13" />
+
+                    <TextView
+                        android:id="@+id/textViewName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/name"
+                        app:layout_constraintStart_toStartOf="@id/guideline15"
+                        app:layout_constraintTop_toBottomOf="@id/textViewRecruiterDetails"/>
+
+                    <TextView
+                        android:id="@+id/textViewNameData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/guideline16"
+                        app:layout_constraintEnd_toEndOf="@id/guideline12"
+                        app:layout_constraintTop_toBottomOf="@id/textViewName"/>
+
+                    <TextView
+                        android:id="@+id/textViewCollege"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/college"
+                        app:layout_constraintStart_toStartOf="@id/guideline15"
+                        app:layout_constraintTop_toBottomOf="@id/textViewNameData"/>
+
+                    <TextView
+                        android:id="@+id/textViewCollegeData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/guideline16"
+                        app:layout_constraintEnd_toEndOf="@id/guideline12"
+                        app:layout_constraintTop_toBottomOf="@id/textViewCollege"/>
+
+                    <TextView
+                        android:id="@+id/textViewCourse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/course"
+                        app:layout_constraintStart_toStartOf="@id/guideline15"
+                        app:layout_constraintTop_toBottomOf="@id/textViewCollegeData"/>
+
+                    <TextView
+                        android:id="@+id/textViewCourseData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/guideline16"
+                        app:layout_constraintEnd_toEndOf="@id/guideline12"
+                        app:layout_constraintTop_toBottomOf="@id/textViewCourse"/>
+
+                    <TextView
+                        android:id="@+id/textViewSemester"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/semester"
+                        app:layout_constraintStart_toStartOf="@id/guideline15"
+                        app:layout_constraintTop_toBottomOf="@id/textViewCourseData"/>
+
+                    <TextView
+                        android:id="@+id/textViewSemesterData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/guideline16"
+                        app:layout_constraintEnd_toEndOf="@id/guideline12"
+                        app:layout_constraintTop_toBottomOf="@id/textViewSemester"
+                        app:layout_constraintBottom_toBottomOf="@id/guideline14"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button2"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/cardViewRecruiterDetails"
+                app:layout_constraintEnd_toStartOf="@id/buttonApply"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:layout_marginTop="40dp"
+                android:text="@string/cancel"/>
+
+            <Button
+                android:id="@+id/buttonApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button2"
+                app:layout_constraintStart_toEndOf="@id/buttonCancel"
+                app:layout_constraintTop_toTopOf="@id/buttonCancel"
+                app:layout_constraintBottom_toBottomOf="@id/buttonCancel"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                android:text="@string/apply"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

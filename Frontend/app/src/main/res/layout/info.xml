@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95"/>
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/customdrawable"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_margin="5dp"
+        app:title="Sign Up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/SignUpButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        android:background="@drawable/button2"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto"
+        android:textSize="23dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        />
+    <Button
+        android:id="@+id/LogInButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintTop_toBottomOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        android:background="@drawable/design_input"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto"
+        android:textSize="23dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

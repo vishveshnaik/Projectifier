@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@mipmap/baseline_feedback_black_18dp"
+            android:id="@+id/Help"
+            android:title="Help and Feedback" />
+        <item
+            android:icon="@mipmap/baseline_live_help_black_18dp"
+            android:id="@+id/Faq"
+            android:title="FAQ" />
+        <item
+            android:icon="@mipmap/baseline_mood_black_18dp"
+            android:id="@+id/Ratings"
+            android:title="Ratings" />
+        <item
+            android:icon="@mipmap/baseline_exit_to_app_black_18dp"
+            android:id="@+id/LogOut"
+            android:title="Log Out" />
+        <item
+            android:icon="@mipmap/baseline_group_black_18dp"
+            android:id="@+id/AboutUs"
+            android:title="About Us" />
+        <item
+           android:icon="@mipmap/baseline_share_black_18dp"
+            android:id="@+id/Share"
+            android:title="Share" />
+    </group>
+</menu>

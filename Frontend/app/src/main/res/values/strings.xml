@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Projectified</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="recruiter_details">Recruiter Details</string>
+    <string name="name">Name</string>
+    <string name="loading">Loading..</string>
+    <string name="college">College</string>
+    <string name="course">Course</string>
+    <string name="semester">Semester</string>
+    <string name="enlist_opportunity">Enlist Opportunity</string>
+    <string name="cancel">Cancel</string>
+    <string name="opportunity_details">Opportunity Details</string>
+    <string name="offer_name">Offer Name</string>
+    <string name="requirement">Requirement</string>
+    <string name="skills">Skills</string>
+    <string name="expectation_from_applicant">Expectation From Applicant</string>
+    <string name="save_amp_update"><![CDATA[Save & Update]]></string>
+    <string name="update_offer_details">Update offer details</string>
+    <string name="view_applicants">View Applicants</string>
+    <string name="view_list_of_applicants">View list of applicants</string>
+    <string name="delist_opportunity">Delist Opportunity</string>
+    <string name="take_down_this_offer_permanently">Take down this offer permanently</string>
+    <string name="allow_candidates_to_apply">Allow candidates to apply</string>
+    <string name="view_details">View Details</string>
+    <string name="view">View</string>
+    <string name="mark_as_seen">Mark As Seen</string>
+    <string name="mark_as_selected">Mark As Selected</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="experience">Experience</string>
+    <string name="previous_work">Previous Work</string>
+    <string name="resume">Resume</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="phone_no">Phone No.</string>
+    <string name="ReEnterPassword">Confirm Password</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="login">LOGIN</string>
+    <string name="enterotp">Enter OTP</string>
+    <string name="verify">Verify</string>
+    <string name="languages">Languages</string>
+
+    <string name="darkmode">Dark Mode</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="description">Description</string>
+    <string name="python">Python</string>
+    <string name="interest1">Interest 1</string>
+    <string name="interest2">Interest 2</string>
+    <string name="interest3">Interest 3</string>
+    <string name="save">Save</string>
+    <string name="submit">Submit</string>
+    <string name="apply">Apply</string>
+    <string name="seen">Seen</string>
+    <string name="selected">Selected</string>
+    <string name="generateOtp">Generate OTP</string>
+    <string name="setPassword">Set Password</string>
+
+    <string-array name="courses">
+        <item>Bachelor of Technology</item>
+        <item>Integrated Master of Technology</item>
+    </string-array>
+
+    <string-array name="semesters">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="interests">
+        <item>Web Development</item>
+        <item>App Development</item>
+        <item>Data Science</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="colleges">
+        <item>Indian Institute of Technology (ISM) Dhanbad</item>
+    </string-array>
+</resources>

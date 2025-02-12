@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up_nav"
+    app:startDestination="@id/signUpHomeFragment">
+    <fragment
+        android:id="@+id/signUpHomeFragment"
+        android:name="com.princeakash.projectified.view.user.SignUpHomeFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/sign_up_user">
+        <action
+            android:id="@+id/home_to_verify_otp"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:destination="@id/verifyOtpFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.princeakash.projectified.view.user.VerifyOtpFragment"
+        android:label="Verify OTP"
+        tools:layout="@layout/fragment_verify_otp">
+        <action
+            android:id="@+id/verify_otp_to_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/signUpHomeFragment"/>
+    </fragment>
+</navigation>

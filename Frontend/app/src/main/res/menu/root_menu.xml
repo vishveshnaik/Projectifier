@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/add_applications_graph"/>
+    <!--<item
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/add_applications_graph"/>-->
+    <item
+        android:title="My Offers"
+        android:icon="@drawable/ic_outline_chat_24"
+        android:id="@+id/my_offers_graph"/>
+    <!--<item
+        android:title="My Applications"
+        android:icon="@drawable/ic_baseline_my_offers_24"
+        android:id="@+id/myApplicationsFragment"/>-->
+    <item
+        android:title="My Applications"
+        android:icon="@drawable/ic_baseline_my_offers_24"
+        android:id="@+id/my_applications_graph"/>
+    <item
+        android:title="Profile"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:id="@+id/profileFragment"/>
+
+</menu>
