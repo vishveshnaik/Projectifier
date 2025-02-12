@@ -1,0 +1,53 @@
+User : 
+    signUp          Done
+    logIn           Done
+    createProfile   Done
+    updateProfile         
+
+    Master Options:
+        getAllUsers         Done
+        getAllProfiles      Done
+        deleteAllUsers      Done
+        deleteAllProfiles   Done
+        deleteUserById      Done
+        deleteProfileById   Done
+
+Offer:
+    Candidate Options:
+        getOffersByDomain (CardView)    Done
+        getOfferById (Apply-1)          Done
+
+    Recruiter Options:
+        addOffer                        Done    (Auth)
+        getOffersByRecruiter (CardView) Done    (Auth)  (Need number of applicants)
+        getOfferByIdRecruiter           Done    (Auth)       
+        updateOffer                     Done    (Auth)
+        deleteOffer                     Done    (Auth)
+        toggleVisibility                Done    (Auth)
+        getOfferApplicants (CardView)   Done    (Auth)  (Need applicant data)
+
+    Master Options:
+        getAllOffers                    Done
+
+
+Application :
+    Recruiter Options:
+        getApplicationById      Done
+        markSeen                Done
+        markSelected            Done
+    
+    Candidate Options:  
+        addApplication                          Done
+        getApplicationsByCandidate (CardView)   Done
+        getApplicationByIdCandidate (Detail)    Done
+        updateApplication                       Done
+        deleteApplication                       Done
+
+    Master Options:
+        getAllApplications  Done
+
+FAQ:
+    User:
+        getAllFaq           Done
+        addQuestion         Done
+    

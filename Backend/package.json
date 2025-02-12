@@ -1,0 +1,37 @@
+{
+  "name": "projectified-backend",
+  "version": "1.0.0",
+  "description": "NodeJS backend for Projectified by DRSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dharma-Raghava-Sai-Shashank/Projectifier_Backend.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "Sai Shashank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dharma-Raghava-Sai-Shashank/Projectifier_Backend/issues"
+  },
+  "homepage": "https://github.com/Dharma-Raghava-Sai-Shashank/Projectifier_Backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.4.17"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^2.0.22"
+  }
+}
